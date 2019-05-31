@@ -27,8 +27,69 @@ src="https://www.youtube.com/embed/jy9ZGANNKDQ">
 </iframe>
 </iframe>
 <h1>Final Exam</h1>
-<iframe src="Final_Exam.pdf" style="width: 25%;height: 25%;border: none;"></iframe>
+<iframe src="Final_Exam.pdf" style="width: 55%;height: 55%;border: none;"></iframe>
 <h1> First Exam </h1>
-<iframe src="1st_Exam.pdf" style="width: 25%;height: 25%;border: none;"></iframe>
+<iframe src="1st_Exam.pdf" style="width: 55%;height: 55%;border: none;"></iframe>
 <h1> Kods First Exam </h1>
+<form>
+ \documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{mathtools}
+\usepackage[pass,paperwidth=174,paperheight=247mm]{geometry}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{18.13 EXERICES }
 
+\addtolength{\textwidth}{4cm}
+\addtolength{\oddsidemargin}{-2cm}
+\begin{document}
+
+\hspace{1cm} (a) use their series representation to prove that
+
+$$b= \frac {d} {dz}M(a,c;z) = a M(a+1,c+1;z) $$
+
+
+   \hspace{1cm} (b) use an integral representation to prove that
+$$M(a,c;z) = e^z M(c-a,c;-z)$$
+
+18.20 \hspace{0.55cm} The Bessel function $J_v(z)$ can be considered as a special case of the solution M(a,c;z) of the confluent hypergeometric equation, the connection being
+
+$$\lim\limits_{a \to \infty} \frac {M(a,v+1;-z/a)} {\Gamma (v+1)}=z^-^v^/^2J_v(2\sqrt{{z}}).$$
+
+\hspace{1cm} Prove this equality by writing each side in terms of an infinite series and showing that the series are the same.
+
+18.21 \hspace{0.55cm} Find the differential equation satisfied by the function y(x) defined by
+
+$$y(x)=Ax^-^n\int_{0}^{x} e^-^t t^n^-^1 dt\equiv Ax^-^n \gamma (n,x),$$
+ and, by comparing it with the confluent hypergeometric function, express y as a multiple of the solution M(a,c:z) of that equation. Determine the value of A that maes equal to M.
+
+18.22 \hspace{0.55cm} Show, from its definition, that the Bessel function of the second kind, and of integral order v,can be written as
+$$Y_v(z)=\frac{1}{\pi} \bigg[\frac{\partial J_\mu (z)}{\partial\mu}-(-1)^v\frac{\partial J_-\mu (z)}{\partial \mu}\bigg]_ {\mu=v}. $$
+
+Using the expicit series expression for $J_\mu(z)$,show that $\partial J_\mu(z)/\partial \mu$ can be written as $$J_v(z)ln\bigg(\frac{z}{2}\bigg)+g(v,z),$$
+
+and deduce that $Y_v(z)$ can be expressed as
+$$Y_v(z)=\frac{2}{\pi}J_v(z)ln(\frac{z}{2}+h(v,z),$$
+
+where h(v,z), like g(v,z), is a power series in z.
+
+18.23 \hspace{0.55cm} Prove two of the properties of the incomplete gamma function $P(a,x^2)$ as follows.
+
+\hspace{1cm} (a) By considering its from for suitable value of $\alpha$, show the error function can be expressed as particular case of the incomplete gamma function.
+
+\hspace{0.55cm} (b) The Fresnel integrals, of importance in the study of the diffraction of light, are given by
+
+\begin{center}
+    
+
+$ C(x) = \int_{0}^{x} cos \bigg(\frac{\pi}{2} t^2 \bigg)dt$ \hspace{0.5cm}$S(x)=\int_{0}^{x} sin\bigg(\frac{\pi}{2} t^2 \bigg)dt$
+\end{center}
+
+Show that they can be expressed in terms of the error function by $$C(x)+iS(x) = A erf \bigg[\frac{\sqrt{\pi}}{2}(1-i)x\bigg],$$
+where A is a (complex) constant, which you should determine. Hence express $C(x)+iS(x)$ in terms of the incomplete gamma function.
+\end{document}
+
+ <\form>
