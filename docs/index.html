@@ -93,3 +93,67 @@ where A is a (complex) constant, which you should determine. Hence express $C(x)
 \end{document}
 
  <\form>
+<h1>Kods Final Exam <\h1>
+ <form>
+ \documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage[pass,paperwidth=174,paperheight=247mm]{geometry}
+\oddsidemargin =1cm
+\textwidth = 450pt
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{427}
+\chead{\textbf{11.5 Finite-Capacity Systems-The{\textit{M/M/1/K}} Queue}}
+
+
+\begin{document}
+\begin{flushleft}
+that all states are ergodic. We have
+$$\rho_1 = \frac{\lambda}{\mu}\rho_0,$$
+
+$$\rho_n_+_1 =\frac{\lambda + \mu}{\mu}\rho_n - \frac{\lambda}{\mu}\rho_n_-_1,\hspace{14} 1\leq n < K - 1, $$
+
+$$ \rho_k =\frac{\lambda}{\mu}\rho_k_-_1. $$
+
+Thus, for all possible values of $n$, and setting $\rho = \lambda/\mu ,$
+
+$$\rho_n = (\frac{\lambda}{\mu})^n \rho_0=\rho^n\rho_0, \hspace{14} 0\leq n \leq K. $$
+
+Notice,in particular, that this holds when $n = K.$ We now need to compute $\rho_0.$ We use
+$$\sum_{n=0}^{K} \rho_{n} = 1$$
+and thus $$\rho_0=\frac{1}{\sum_{n=0}^{K}\rho^n}.$$
+The divisor is a finite geometric series and
+$$\sum_{n=0}^{K}\rho^{n}=\frac{1-\rho^{K+1}}{1-\rho} \hspace{9} if\hspace{3}  \rho \neq 1$$
+and is equal to $K+1$ if $\rho =1.$ Hence
+$$\rho_0 = \begin{cases}
+    (1-\rho)/(1-\rho^{K+1)} \hspace{17} if \rho \neq 1
+    \\
+    1/(K+1) \hspace{55} if \rho = 1.
+    \end{cases}$$
+and is equal to $1/(K+1)$ if $ \rho=1.$ Thus, the steady-state     solution always exists, even for $\rho\geq 1.$   The system is stable for all positive values of $\lambda$ and $\mu$ . When $\lambda > \mu $, the number of customers in the system will increase, but it is bound from above by K. Also notice that $\rho$ no longer represents the utilization. We shall derive an expression for this in just a moment. Finally, notice what happens as $K \rightarrow \infty$ and $\rho < 1.$ We have
+$$\lim_{K\to\infty}\frac{1-\rho}{1-\rho^{K+1}}\rho^n = (1-\rho)\rho^n,$$
+which is the result previously obtained for the $M/M/1$ queue.
+\\[0.5cm]
+\textbf{Example 11.12} Perhaps the simples example we can present is the $M/M/1/1$ queue. This gives rise to a two-state birth-death process, as illustrated in Figure 11.20
+$$\begin{tikzpicture}
+\def \n {2}
+\def \radius {0.6cm}
+\def \margin {30}
+\foreach \s in {0,...,\n}
+{
+\node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
+  \draw[<-, >=latex] ({360/\n * (\s - 1)+\margin}:\radius)
+    arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
+}
+\end{tikzpicture}$$
+\end{flushleft}
+\begin{center}
+    Figure 11.20. State transition diagram for the $M/M/1/1$ queue.
+\end{center}
+\end{document} 
+  <\form>
